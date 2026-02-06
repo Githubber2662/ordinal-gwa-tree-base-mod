@@ -116,7 +116,7 @@ addLayer("g", {
         let e = player.g.points.max(10).log10().log(2).add(2)
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(2)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         if (hasUpgrade("b",71))e=e.mul(upgradeEffect("b",71))
         e=e.pow(1+player.b.challenges[12])
         if (inChallenge("b",42))e=e.div(888)
@@ -138,7 +138,7 @@ addLayer("g", {
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(3)
         if (hasUpgrade("h",101))e=e.mul(2)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         if (hasUpgrade("b",72))e=e.mul(upgradeEffect("b",72))
         if (player.g.base.gte(7))e=e.mul(layers.h.fastEffect())
         e=e.pow(1+player.b.challenges[12])
@@ -161,7 +161,7 @@ addLayer("g", {
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(4)
         if (hasUpgrade("h",101))e=e.mul(6)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         e=e.pow(1+player.b.challenges[12])
         if (hasUpgrade("b",52))e=e.mul(upgradeEffect("b",52))
         if (inChallenge("b",42))e=e.div(888)
@@ -182,7 +182,7 @@ addLayer("g", {
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(5)
         if (hasUpgrade("h",101))e=e.mul(24)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         e=e.pow(1+player.b.challenges[12])
         if (inChallenge("b",42))e=e.div(888)
         return e
@@ -203,7 +203,7 @@ addLayer("g", {
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(6)
         if (hasUpgrade("h",101))e=e.mul(120)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         if (hasUpgrade("h",32))e=e.mul(player.h.slow.max(1))
         e=e.pow(1+player.b.challenges[12])
         if (inChallenge("b",42))e=e.div(888)
@@ -225,7 +225,7 @@ addLayer("g", {
         if (inChallenge("b",12))e=new Decimal(1)
         if (hasUpgrade("b",11))e=e.mul(7)
         if (hasUpgrade("h",101))e=e.mul(720)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         if (hasUpgrade("h",31))e=e.mul(player.h.fast.max(1))
         e=e.pow(1+player.b.challenges[12])
         if (inChallenge("b",42))e=e.div(888)
@@ -246,7 +246,7 @@ addLayer("g", {
         let e = player.g.buyables[12].sqrt().add(1)
         if (hasUpgrade("b",11))e=e.mul(8)
         if (hasUpgrade("h",101))e=e.mul(5040)
-        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?12:5).sub(player.g.base)).max(1))
+        if (hasUpgrade("b",32))e=e.mul((new Decimal(hasUpgrade("h",122)?18:12).sub(player.g.base)).max(1))
         e=e.pow(Decimal.pow(2,player.b.challenges[32]))
         if (hasUpgrade("c",12))e=e.pow(7)
         if (inChallenge("b",42))e=e.div(888)
@@ -348,9 +348,9 @@ addLayer("g", {
       unlocked(){return hasMilestone(this.layer, this.id-1)}
     },
     6: {
-      requirementDescription: "200 boosts and all sluggish milestones",
+      requirementDescription: "100 boosts and all sluggish milestones",
         effectDescription: "Auto booster reset and boosters reset nothing",
-        done() { return player.b.boosts.gte(200)&&hasMilestone("c",5) },
+        done() { return player.b.boosts.gte(100)&&hasMilestone("c",5) },
       unlocked(){return hasMilestone(this.layer, this.id-1)}
     },
     7: {
