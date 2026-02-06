@@ -127,7 +127,7 @@ addLayer("b", {
       description(){if (hasUpgrade("h",131))return "The ordinal base boosts incrementy at a higher rate"
         return "The ordinal base boosts incrementy"},
       cost(){
-        return new Decimal(234)
+        return new Decimal(48)
       },
       canAfford(){return hasUpgrade(this.layer,this.id-10)},
       unlocked(){return player.g.base.lte(7)}
@@ -136,7 +136,7 @@ addLayer("b", {
       description(){if (hasUpgrade("h",132))return "Hierarchies grow faster based on factor boosts and unspent cardinals"
         return "Hierarchies grow faster based on factor boosts"},
       cost(){
-        return new Decimal(203)
+        return new Decimal(80)
       },
       canAfford(){return hasUpgrade(this.layer,this.id-10)},
       unlocked(){return hasUpgrade(this.layer,41)||player.g.base.lte(6)}
@@ -148,7 +148,7 @@ addLayer("b", {
         return new Decimal(102)
       },
       canAfford(){return hasUpgrade(this.layer,this.id-10)},
-      unlocked(){return hasUpgrade(this.layer,42)||player.g.base.gte(8)}
+      unlocked(){return hasUpgrade(this.layer,42)||player.g.base.lte(6)}
     },
     101:{
       description(){if (hasUpgrade("h",141))return "Reduce the FGH base to 7"
