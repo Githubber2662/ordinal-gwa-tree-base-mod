@@ -318,16 +318,16 @@ addLayer("g", {
       unlocked(){return player.g.base.lte(7) || hasMilestone(this.layer,this.id)}
     },
     1: {
-      requirementDescription: "40 factor boosts",
+      requirementDescription: "15 factor boosts",
         effectDescription: "Unlock overflow, gain 100% of GP gain on reset per second, and base shifts no longer reset any upgrades",
-        done() { return player.b.boosts.gte(40) },
-      unlocked(){return player.b.boosts.gte(40) || hasMilestone(this.layer,this.id)}
+        done() { return player.b.boosts.gte(15) },
+      unlocked(){return player.b.boosts.gte(15) || hasMilestone(this.layer,this.id)}
     },
     2: {
-      requirementDescription: "60 factor boosts",
+      requirementDescription: "30 factor boosts",
         effectDescription: "Unlock charge (subtab of Hierarchies)",
-        done() { return player.b.boosts.gte(60) },
-      unlocked(){return player.b.boosts.gte(40) || hasMilestone(this.layer,this.id)}
+        done() { return player.b.boosts.gte(30) },
+      unlocked(){return player.b.boosts.gte(30) || hasMilestone(this.layer,this.id)}
     },
     3: {
       requirementDescription: "1e100 FGH",
@@ -336,9 +336,9 @@ addLayer("g", {
       unlocked(){return player.b.boosts.gte(60) || hasMilestone(this.layer,this.id)}
     },
     4: {
-      requirementDescription: "75 factor boosts",
+      requirementDescription: "40 factor boosts",
         effectDescription: "Unlock 3 more charge upgrades",
-        done() { return player.b.boosts.gte(75) },
+        done() { return player.b.boosts.gte(40) },
       unlocked(){return hasMilestone(this.layer, this.id-1)}
     },
     5: {
