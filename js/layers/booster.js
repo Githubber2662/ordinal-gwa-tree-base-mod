@@ -11,8 +11,6 @@ addLayer("b", {
     }},
     color: "#3333FF",
     requires(){
-      if (player.b.boosts.gte(160)) return Decimal.pow(BHO, player.b.boosts.div(10).sub(10))
-      if (player.b.boosts.gte(80)) return Decimal.pow(BHO, player.b.boosts.div(20).sub(2))
       if (player.b.boosts.gte(40)) return Decimal.pow(3, player.b.boosts).mul(12)
       if (player.g.incrementyUnlock)return Decimal.pow(3, player.b.boosts).round().mul(12).round().min(BHO)
       return new Decimal(1e20).pow(Decimal.pow(2.5, player.b.boosts.min(2)).mul(Decimal.pow(2,player.b.boosts.sub(2).max(0))))}, // Can be a function that takes requirement increases into account
