@@ -45,6 +45,7 @@ function getIncrementyGain(){
 }
 function getPsiGain(){
   let gain = new Decimal(1)
+  gain=gain.mul((player.b.psi.add(10)).log(10))
   if (hasUpgrade("b",61))gain=gain.mul(upgradeEffect("b",61))
   if (hasUpgrade("b",62))gain=gain.mul(upgradeEffect("b",62))
   gain=gain.mul(buyableEffect("b",12))
