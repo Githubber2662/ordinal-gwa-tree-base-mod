@@ -107,7 +107,7 @@ addLayer("b", {
     },
     32:{
       description(){if (hasUpgrade("h",122))return "All factors are multiplied by 18 minus the ordinal base"
-        return "Factors 1-7 are multiplied by the 12 minus the ordinal base"},
+        return "Factors 1-7 are multiplied by 12 minus the ordinal base"},
       cost(){
         return new Decimal(18)
       },
