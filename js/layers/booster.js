@@ -253,7 +253,7 @@ addLayer("b", {
       currencyInternalName: "incrementy",
       currencyLocation(){return player.b},
       unlocked(){return player.g.incrementyUnlock},
-      effect(){return upgradeEffect("g",21).pow((hasUpgrade("h",21)?1/3:0.25).max(1)}
+      effect(){return upgradeEffect("g",21).pow(hasUpgrade("h",21)?1/3:0.25).max(1)}
     },
     71:{
       title: "boosted boosters boosts boost boosts",
