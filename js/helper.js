@@ -36,7 +36,7 @@ function getIncrementyGain(){
   if (hasUpgrade("b",63))gain=gain.mul(upgradeEffect("b",63))
   gain=gain.mul(Decimal.pow(2,player.b.challenges[41]))
   if (player.g.base.gte(7))gain=gain.mul(layers.h.slowEffect())
-  if (hasUpgrade("b",41))gain=gain.mul(player.g.base.sub(5).pow(hasUpgrade("h",131)?7:4))
+  if (hasUpgrade("b",41))gain=gain.mul((new Decimal("15").sub(player.g.base)).pow(hasUpgrade("h",131)?7:4))
   if (player.b.challenges[22]>=3)gain=gain.mul(10)
   if(player.c.unlocked)gain=gain.mul(alephEffect(4))
   if (hasUpgrade("c",21))gain=gain.pow(hasUpgrade("c",111)?1.03:1.01)
