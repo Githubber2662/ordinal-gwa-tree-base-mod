@@ -73,7 +73,7 @@ addLayer("b", {
       },
     },
     21:{
-      description(){if (hasUpgrade("h",111) || hasMilestone("c",1))return "Square dynamic effect, and dynamic factor increases 10x faster and caps 10x later, but Incrementy upgrade 6 ^0.6."
+      description(){if (hasUpgrade("h",111) || hasMilestone("c",1))return "Square dynamic effect, and dynamic factor increases 10x faster and caps 10x later"
         return "Dynamic factor increases 10x faster and caps 10x later."},
       cost(){
         return new Decimal(5)
@@ -106,8 +106,8 @@ addLayer("b", {
       unlocked(){return player.g.base.lte(8)}
     },
     32:{
-      description(){if (hasUpgrade("h",122))return "All factors are multiplied by the ordinal base (before reductions)"
-        return "Factors 1-7 are multiplied by the ordinal base-4"},
+      description(){if (hasUpgrade("h",122))return "All factors are multiplied by 18 minus the ordinal base"
+        return "Factors 1-7 are multiplied by the 12 minus the ordinal base"},
       cost(){
         return new Decimal(18)
       },
@@ -253,7 +253,7 @@ addLayer("b", {
       currencyInternalName: "incrementy",
       currencyLocation(){return player.b},
       unlocked(){return player.g.incrementyUnlock},
-      effect(){return upgradeEffect("g",21).pow((hasUpgrade("h",111)||hasMilestone("c",1))?0.2:hasUpgrade("h",21)?1/3:0.25).max(1)}
+      effect(){return upgradeEffect("g",21).pow((hasUpgrade("h",21)?1/3:0.25).max(1)}
     },
     71:{
       title: "boosted boosters boosts boost boosts",
