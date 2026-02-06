@@ -81,7 +81,7 @@ addLayer("b", {
       canAfford(){return hasUpgrade(this.layer,this.id-10)}
     },
     22:{
-      description(){if (hasUpgrade("h",112))return "gwarkup point gain base is 25"
+      description(){if (hasUpgrade("h",112))return "gwarkup point gain base is 40"
         return "Multiply gwarkup point gain by 1e10."},
       cost(){
         return new Decimal(3)
@@ -115,8 +115,8 @@ addLayer("b", {
       unlocked(){return player.g.base.lte(8)}
     },
     33:{
-      description(){if (hasUpgrade("h",123))return "The ordinal base is lowered by 1"
-        return "The ordinal base is lowered by 1"},
+      description(){if (hasUpgrade("h",123))return "The ordinal base is lowered by 2 if higher than 5"
+        return "The ordinal base is lowered by 1 if higher than 4"},
       cost(){
         return new Decimal(42)
       },
@@ -372,7 +372,7 @@ addLayer("b", {
         boost()
       },
       completionLimit: 3,
-	  rewardDescription(){return "gwarkup point gain base "+(player.b.challenges[this.id]==3?"is 20":player.b.challenges[this.id]==2?"15 -> 20":player.b.challenges[this.id]==1?"11 -> 15":"10 -> 11")}
+	  rewardDescription(){return "gwarkup point gain base "+(player.b.challenges[this.id]==3?"is 30":player.b.challenges[this.id]==2?"20 -> 30":player.b.challenges[this.id]==1?"15 -> 20":"12 -> 15")}
     },
     12: {
         name: "C2",
