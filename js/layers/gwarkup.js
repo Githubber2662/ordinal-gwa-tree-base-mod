@@ -67,7 +67,7 @@ addLayer("g", {
   buyables: {
     11: {
         cost(x=getBuyableAmount(this.layer,this.id)) { 
-          let costs = [new Decimal("100"), new Decimal("1000"), new Decimal("10000"), new Decimal("100000"), new Decimal("1.00e11"), new Decimal("1.00e15"), new Decimal("1.00e25"), new Decimal("1.00e100"), new Decimal("10^^100")]
+          let costs = [new Decimal("100"), new Decimal("1000"), new Decimal("10000"), new Decimal("100000"), new Decimal("1.00e11"), new Decimal("1.00e15"), new Decimal("1.00e25"), new Decimal("1.00e100"), new Decimal("10^^1e308")]
           return costs[covar.sub(player.g.base)]
         },
         display() { return "Decrease the ordinal base by 1.<br>Cost: "+format(this.cost())+" gwarkup points" },
