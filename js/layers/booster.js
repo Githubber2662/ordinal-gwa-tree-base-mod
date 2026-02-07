@@ -79,7 +79,7 @@ addLayer("b", {
       canAfford(){return hasUpgrade(this.layer,this.id-10)}
     },
     22:{
-      description(){if (hasUpgrade("h",112))return "gwarkup point gain base is 40"
+      description(){if (hasUpgrade("h",112))return "gwarkup point gain base is 60"
         return "Multiply gwarkup point gain by 1e10."},
       cost(){
         return new Decimal(3)
