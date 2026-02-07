@@ -36,7 +36,7 @@ addLayer("c", {
   prestigeButtonText(){return "Collapse for <b>+"+formatWhole(this.getResetGain())+"</b> cardinals.<br>Requires: "+numToPsi(this.requires())+" psi ordinal"},
   getResetGain(){
     if (!player.c.unlocked)return new Decimal(3)
-      let g= Decimal.pow(3,player.b.boosts.sub(90).div(10)).add(1e-14).mul(3).floor()
+      let g= Decimal.pow(3,player.b.boosts.sub(40).div(10)).add(1e-14).mul(3).floor()
       if (hasUpgrade("c",23))g=g.mul(upgradeEffect("c",23))
     if (hasUpgrade("b",103))g=g.mul(upgradeEffect("b",103))
       let h = g.max(3).pow(player.c.singularityEnabled?tmp.c.singularityEffects[0]:1).round()
@@ -421,7 +421,7 @@ addLayer("c", {
         },
       goalDescription(){return "Reach "+format(this.req())+" gwarkup points"},
       req(){
-      return new Decimal("10^^1e308")
+      return new Decimal("ee10")
     },
         canComplete(){return false},
       onEnter(){
