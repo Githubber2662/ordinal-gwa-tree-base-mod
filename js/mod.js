@@ -149,7 +149,7 @@ var displayThings = [function(){
 
 // Determines when the game "ends"
 function isEndgame() {
-  return false
+  return player.g.points.gte(new Decimal("ee300"))
 }
 
 
